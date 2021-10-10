@@ -101,6 +101,24 @@ namespace DataStructuresLinkedList
             Console.WriteLine("\nAdding node " + value + " between two node " + valueOne + " and " + valueTwo + " of LL");
         }
         /// <summary>
+        /// Delete a first node of the given LL
+        /// </summary>
+        public void DeleteFirstNode()
+        {
+            NodeCreation temp = this.head;
+            if (head == null)
+            {
+                Console.WriteLine("LL is empty");
+                return;
+            }
+            else
+            {
+                this.head = head.next;
+                temp.next = null;
+            }
+            Console.WriteLine("\nAfter Deleting first node " + temp.data + " of LL");
+        }
+        /// <summary>
         /// display the all node data in Current LL
         /// </summary>
         public void displayLL()

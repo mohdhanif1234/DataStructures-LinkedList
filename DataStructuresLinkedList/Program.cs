@@ -26,7 +26,7 @@ namespace DataStructuresLinkedList
             Console.WriteLine("After adding some node in LL");
             list.displayLL();
             Console.WriteLine("****************************************************************\n");
-            //Inserting a node at begning of the LL
+            //Inserting a node at beginning of the LL
             list.InsertNodeAtStart(80);
             list.displayLL();
             Console.WriteLine("****************************************************************\n");
@@ -38,7 +38,12 @@ namespace DataStructuresLinkedList
             list.AddNodeBetween(30, 70, 90);
             list.displayLL();
             Console.WriteLine("****************************************************************\n");
-            Console.WriteLine("\nEND OF APPLICATION\n****************************************************************"); Console.ReadLine();
+            //Deletinng first node of the LinkedList
+            list.DeleteFirstNode();
+            list.displayLL();
+            Console.WriteLine("****************************************************************\n");
+            Console.WriteLine("\nEND OF APPLICATION\n****************************************************************");
+            Console.ReadLine();
         }
     }
 }
