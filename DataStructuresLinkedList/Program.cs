@@ -42,6 +42,10 @@ namespace DataStructuresLinkedList
             list.DeleteFirstNode();
             list.displayLL();
             Console.WriteLine("****************************************************************\n");
+            //Deleting last node of the LinkedList
+            list.DeleteLastNode();
+            list.displayLL();
+            Console.WriteLine("****************************************************************\n");
             Console.WriteLine("\nEND OF APPLICATION\n****************************************************************");
             Console.ReadLine();
         }
