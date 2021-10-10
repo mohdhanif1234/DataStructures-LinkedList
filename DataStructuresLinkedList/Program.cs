@@ -16,7 +16,6 @@ namespace DataStructuresLinkedList
             LinkedList list = new LinkedList();
             list.AddNode(56);
             list.AddNode(1);
-            list.AddNode(2);
             list.AddNode(9);
             list.AddNode(8);
             list.AddNode(7);
@@ -27,8 +26,12 @@ namespace DataStructuresLinkedList
             Console.WriteLine("After adding some node in LL");
             list.displayLL();
             Console.WriteLine("****************************************************************\n");
-            //Inserting a node at begning of the LL
+            //Inserting a node at beginning of the LL
             list.InsertNodeAtStart(80);
+            list.displayLL();
+            Console.WriteLine("****************************************************************\n");
+            //Apending a node in the last of a LL
+            list.AppendNode(2);
             list.displayLL();
             Console.WriteLine("****************************************************************\n");
             Console.WriteLine("\nEND OF APPLICATION\n****************************************************************");
