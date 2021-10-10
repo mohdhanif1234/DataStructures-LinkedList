@@ -74,6 +74,32 @@ namespace DataStructuresLinkedList
             }
             Console.WriteLine("\nAfter Appending node value " + appendValue + " at the end of LL");
         }
+
+        // Adding a node between two nodes
+        public void AddNodeBetween(int valueOne, int valueTwo, int value)
+        {
+            NodeCreation node = new NodeCreation(value);
+            if (head == null || head.next == null)
+            {
+                Console.WriteLine("We can't add a node between two nodes");
+                return;
+            }
+            else
+            {
+                NodeCreation temp = head;
+                while (temp.next != null)
+                {
+                    if (valueOne.Equals(temp.data) && valueTwo.Equals(temp.next.data))
+                    {
+                        break;
+                    }
+                    temp = temp.next;
+                }
+                node.next = temp.next;
+                temp.next = node;
+            }
+            Console.WriteLine("\nAdding node " + value + " between two node " + valueOne + " and " + valueTwo + " of LL");
+        }
         /// <summary>
         /// display the all node data in Current LL
         /// </summary>
