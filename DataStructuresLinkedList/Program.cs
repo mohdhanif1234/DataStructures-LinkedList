@@ -46,6 +46,8 @@ namespace DataStructuresLinkedList
             list.DeleteLastNode();
             list.displayLL();
             Console.WriteLine("****************************************************************\n");
+            //Search a node in given LL
+            list.SearchNode(3);
             Console.WriteLine("\nEND OF APPLICATION\n****************************************************************");
             Console.ReadLine();
         }
