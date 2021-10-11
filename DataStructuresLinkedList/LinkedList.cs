@@ -168,6 +168,40 @@ namespace DataStructuresLinkedList
             Console.WriteLine("\n****************************************************************\n");
         }
         /// <summary>
+        /// Insert a node after a given node in LL
+        /// </summary>
+        /// <param name="value"></param>
+        public void InsertAfterNode(int afterValue, int insertValue)
+        {
+            NodeCreation node = new NodeCreation(insertValue);
+            if (head == null)
+            {
+                Console.WriteLine("We can't add a node");
+                return;
+            }
+            else
+            {
+                NodeCreation temp = head;
+                while (temp != null)
+                {
+                    if (afterValue.Equals(temp.data))
+                    {
+                        node.next = temp.next;
+                        temp.next = node;
+                        Console.WriteLine("\nInserting node " + insertValue + " after node " + afterValue + " of LL");
+                        break;
+                    }
+                    temp = temp.next;
+                }
+                if (temp == null)
+                {
+                    Console.WriteLine("\n****************************************************************\n");
+                    Console.WriteLine("There is no node present in LL with the node value " + afterValue);
+                    Console.WriteLine("\n****************************************************************\n");
+                }
+            }
+        }
+        /// <summary>
         /// display the all node data in Current LL
         /// </summary>
         public void displayLL()

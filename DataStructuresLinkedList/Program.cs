@@ -48,6 +48,9 @@ namespace DataStructuresLinkedList
             Console.WriteLine("****************************************************************\n");
             //Search a node in given LL
             list.SearchNode(3);
+            //insert a node 15 after a given node 7 in LL
+            list.InsertAfterNode(7, 15);
+            list.displayLL();
             Console.WriteLine("\nEND OF APPLICATION\n****************************************************************");
             Console.ReadLine();
         }
