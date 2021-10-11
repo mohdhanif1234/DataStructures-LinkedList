@@ -51,6 +51,11 @@ namespace DataStructuresLinkedList
             //insert a node 15 after a given node 7 in LL
             list.InsertAfterNode(7, 15);
             list.displayLL();
+            Console.WriteLine("****************************************************************\n");
+            //Deleting Random node of the LinkedList
+            list.DeleteRandomNode(30);
+            list.displayLL();
+            Console.WriteLine("****************************************************************\n");
             Console.WriteLine("\nEND OF APPLICATION\n****************************************************************");
             Console.ReadLine();
         }
