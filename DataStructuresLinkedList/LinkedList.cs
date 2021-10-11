@@ -10,6 +10,7 @@ namespace DataStructuresLinkedList
     {   
         //initialize the head of the LL
         public NodeCreation head;
+        public NodeCreation sortedHead;
         /// <summary>
         /// add new node to LL in last
         /// </summary>
@@ -233,6 +234,48 @@ namespace DataStructuresLinkedList
             {
                 Console.WriteLine("Given data value " + randomValue + " is not present in LL");
             }
+        }
+        /// <summary>
+        /// Method To create a Ordered LL in assending order
+        /// </summary>
+        /// <param name="value"></param>
+        public void AddInSortedLinkedList(int value)
+        {
+            //Create a new Node of LL and add to LL
+            NodeCreation node = new NodeCreation(value);
+            if (this.sortedHead == null || (sortedHead.data.CompareTo(value) >= 0))
+            {
+                node.next = sortedHead;
+                this.sortedHead = node;
+            }
+            else
+            {
+                NodeCreation temp = sortedHead;
+                while (temp.next != null && (temp.next.data.CompareTo(value) < 0))
+                {
+                    temp = temp.next;
+                }
+                node.next = temp.next;
+                temp.next = node;
+            }
+        }
+        /// <summary>
+        /// display the all node data in a assending order of Current LL
+        /// </summary>
+        public void DisplaySortedLL()
+        {
+            NodeCreation temp = sortedHead;
+            if (temp == null)
+            {
+                Console.WriteLine("Given LL is empty");
+            }
+            Console.WriteLine("-->Display all node value of LL in assending order");
+            while (temp != null)
+            {
+                Console.Write(temp.data + " ");
+                temp = temp.next;
+            }
+            Console.WriteLine("\n");
         }
         /// <summary>
         /// display the all node data in Current LL

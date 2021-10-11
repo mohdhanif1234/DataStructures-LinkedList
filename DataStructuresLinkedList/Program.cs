@@ -56,6 +56,16 @@ namespace DataStructuresLinkedList
             list.DeleteRandomNode(30);
             list.displayLL();
             Console.WriteLine("****************************************************************\n");
+            LinkedList orderedList = new LinkedList();
+            orderedList.AddInSortedLinkedList(56);
+            orderedList.AddInSortedLinkedList(30);
+            orderedList.AddInSortedLinkedList(40);
+            orderedList.AddInSortedLinkedList(80);
+            orderedList.AddInSortedLinkedList(57);
+            orderedList.AddInSortedLinkedList(72);
+            Console.WriteLine("After adding some node in a sorted LL");
+            orderedList.DisplaySortedLL();
+            Console.WriteLine("****************************************************************\n");
             Console.WriteLine("\nEND OF APPLICATION\n****************************************************************");
             Console.ReadLine();
         }
